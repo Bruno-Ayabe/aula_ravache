@@ -8,3 +8,12 @@ public class Arvore {
         return 1 + contarNos(node.esquerda) + contarNos(node.direita);
     }
 }
+
+//Implementar um método para percorrer os nós da árvore em pré-ordem
+    public void buscarPreOrdem(No node) {
+        if (node != null) {
+            System.out.print(node.valor + " ");
+            buscarPreOrdem(node.esquerda);
+            buscarPreOrdem(node.direita);
+        }
+    }
