@@ -17,3 +17,14 @@ public class Arvore {
             buscarPreOrdem(node.direita);
         }
     }
+
+    //Implemente um método para percorrer os nós da árvore em em-ordem
+    public void buscaEmOrdem(No node) {
+        if (node != null) {
+            buscarEmOrdem(node.esquerda);
+            System.out.printl(node.valor + " ");
+            buscarPreOrdem(node.direita);
+        }
+    }
+}
+
