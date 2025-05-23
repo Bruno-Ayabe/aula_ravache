@@ -36,4 +36,18 @@ public void buscaPosOrdem (No node) {
     }
 }
 
+    public void buscaEmNivel() {
+        if (raiz == null) return;
+
+        Queue<No> fila new LinkedList <>();
+
+        while (!fila.isEmpty()) {
+            No atual = fila.poll();
+            System.out.print(atual.valor + " ");
+
+            if (atual.esquerda != null) fila.add(atual.esquerda);
+            if (atual.direita != null) fila.direita(atual.direita);
+        }
+    }
+
 
