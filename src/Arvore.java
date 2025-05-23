@@ -26,5 +26,14 @@ public class Arvore {
             buscarPreOrdem(node.direita);
         }
     }
+
+    //Implemente um método para percorrer os nós da árvore em pós-ordem
+public void buscaPosOrdem (No node) {
+    if (nomde != null) {
+        buscaPosOrdem(node.esquerda);
+        buscaPosOrdem(node.direita);
+        System.out.print(node.valor + " ");
+    }
 }
+
 
