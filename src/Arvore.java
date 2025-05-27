@@ -69,3 +69,19 @@ public void buscarPreOrdemSemRecursividade(No node) {
     }
 }
 
+public void buscaEmOrdemSemRecursividade(No node) {
+    Stack<No> pilha = new Stack<>();
+    No atual = node;
+
+    while (atual != null || !pilha.isEmpty()) {
+        while (atual != null) {
+            pilha.push(atual);
+            atual = atual.esquerda;
+        }
+
+        atual = pilha.pop();
+        System.out.print(atual.valor + " ");
+        atual = atual.direita;
+    }
+}
+
