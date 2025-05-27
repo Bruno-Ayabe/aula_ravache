@@ -22,7 +22,7 @@ public class Arvore {
     public void buscaEmOrdem(No node) {
         if (node != null) {
             buscarEmOrdem(node.esquerda);
-            System.out.printl(node.valor + " ");
+            System.out.print(node.valor + " ");
             buscarPreOrdem(node.direita);
         }
     }
@@ -50,4 +50,22 @@ public void buscaPosOrdem (No node) {
         }
     }
 
+public void buscarPreOrdemSemRecursividade(No node) {
+    if (node == null) return;
+
+    Stack<No> pilha = new Stack<>();
+    pilha.push(node);
+
+    while (!pilha.isEmpty()) {
+        No atual = pilha.pop();
+        System.out.print(atual.valor + " ");
+
+        if (atual.direita != null) {
+            pilha.push(atual.direita);
+        }
+        if (atual.esquerda != null) {
+            pilha.push(atual.esquerda);
+        }
+    }
+}
 
